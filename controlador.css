@@ -1,0 +1,800 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f4f7fb;
+
+    color: #263238;
+
+    min-height: 100vh;
+
+}
+
+
+/* ==========================
+   ENCABEZADO
+========================== */
+
+.encabezado {
+
+    background:
+        linear-gradient(
+            135deg,
+            #315c8c,
+            #547da3
+        );
+
+    color: white;
+
+    padding: 28px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0,0,0,.08);
+
+}
+
+
+.logo {
+
+    width: 60px;
+
+    height: 60px;
+
+    background:
+        rgba(255,255,255,.18);
+
+    border-radius: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+
+}
+
+
+.encabezado h1 {
+
+    font-size: 28px;
+
+    margin-bottom: 5px;
+
+}
+
+
+/* ==========================
+   CONTENEDOR
+========================== */
+
+.contenedor {
+
+    width: 90%;
+
+    max-width: 1150px;
+
+    margin: 35px auto;
+
+}
+
+
+/* ==========================
+   ESTADÍSTICAS
+========================== */
+
+.estadisticas {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.estadistica {
+
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    box-shadow:
+        0 5px 18px
+        rgba(31,52,73,.07);
+
+}
+
+
+.estadistica span {
+
+    width: 50px;
+
+    height: 50px;
+
+    background: #edf4fb;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+}
+
+
+.estadistica h3 {
+
+    color: #315c8c;
+
+    font-size: 25px;
+
+}
+
+
+.estadistica p {
+
+    color: #718096;
+
+}
+
+
+/* ==========================
+   PANEL
+========================== */
+
+.panel {
+
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 18px
+        rgba(31,52,73,.07);
+
+    margin-bottom: 25px;
+
+}
+
+
+.titulo-panel {
+
+    margin-bottom: 22px;
+
+}
+
+
+.titulo-panel h2 {
+
+    color: #263f59;
+
+}
+
+
+.titulo-panel p {
+
+    color: #718096;
+
+    margin-top: 5px;
+
+}
+
+
+/* ==========================
+   FORMULARIO
+========================== */
+
+.grupo {
+
+    margin-bottom: 18px;
+
+}
+
+
+.grupo label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+
+    color: #425466;
+
+}
+
+
+input,
+textarea,
+select {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #d7e0e9;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    background: #fbfcfe;
+
+}
+
+
+input:focus,
+textarea:focus,
+select:focus {
+
+    border-color: #5d86aa;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(93,134,170,.12);
+
+}
+
+
+.fila {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+
+}
+
+
+/* ==========================
+   ARCHIVO
+========================== */
+
+.ayuda {
+
+    display: block;
+
+    margin-top: 7px;
+
+    color: #7b8794;
+
+}
+
+
+.archivo-seleccionado {
+
+    margin-bottom: 15px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    background: #edf4fb;
+
+    color: #315c8c;
+
+    display: none;
+
+}
+
+
+/* ==========================
+   BOTONES
+========================== */
+
+.btn-guardar {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #315c8c;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.btn-guardar:hover {
+
+    background: #274c75;
+
+}
+
+
+.btn-cancelar {
+
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 12px;
+
+    border: 1px solid #d5dde6;
+
+    border-radius: 10px;
+
+    background: #f4f7fa;
+
+    color: #536273;
+
+    cursor: pointer;
+
+    display: none;
+
+}
+
+
+/* ==========================
+   HERRAMIENTAS
+========================== */
+
+.herramientas {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 200px 230px;
+
+    gap: 15px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.buscador {
+
+    background: white;
+
+    border: 1px solid #e0e7ef;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding-left: 15px;
+
+}
+
+
+.buscador input {
+
+    border: none;
+
+    background: transparent;
+
+}
+
+
+/* ==========================
+   TÍTULO
+========================== */
+
+.titulo-lista {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+
+}
+
+
+.titulo-lista h2 {
+
+    color: #263f59;
+
+}
+
+
+#contador {
+
+    color: #718096;
+
+}
+
+
+/* ==========================
+   TAREAS
+========================== */
+
+.lista-tareas {
+
+    display: grid;
+
+    gap: 15px;
+
+}
+
+
+.tarea {
+
+    background: white;
+
+    border: 1px solid #e0e7ef;
+
+    border-radius: 17px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 4px 13px
+        rgba(31,52,73,.05);
+
+}
+
+
+.tarea.completada {
+
+    opacity: .65;
+
+}
+
+
+.tarea.completada
+.titulo-tarea {
+
+    text-decoration: line-through;
+
+}
+
+
+.estudiante {
+
+    display: inline-block;
+
+    background: #e8f0f8;
+
+    color: #315c8c;
+
+    padding: 8px 12px;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+
+}
+
+
+.titulo-tarea {
+
+    color: #263f59;
+
+    font-size: 19px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.materia {
+
+    display: inline-block;
+
+    background: #edf4fb;
+
+    color: #315c8c;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+
+.descripcion {
+
+    color: #667789;
+
+    line-height: 1.5;
+
+    margin: 15px 0;
+
+}
+
+
+.fecha {
+
+    color: #536273;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* ==========================
+   ARCHIVO EN TARJETA
+========================== */
+
+.archivo-tarea {
+
+    background: #f5f8fb;
+
+    border: 1px solid #e1e8ef;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.archivo-tarea strong {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #425466;
+
+}
+
+
+.btn-archivo {
+
+    display: inline-block;
+
+    text-decoration: none;
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+
+    background: #e8f0f8;
+
+    color: #315c8c;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+
+/* ==========================
+   ACCIONES
+========================== */
+
+.acciones {
+
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.btn {
+
+    border: none;
+
+    padding: 9px 12px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+
+.btn-completar {
+
+    background: #e9f4ed;
+
+    color: #3f7554;
+
+}
+
+
+.btn-editar {
+
+    background: #edf2f7;
+
+    color: #496276;
+
+}
+
+
+.btn-eliminar {
+
+    background: #faeeee;
+
+    color: #a55757;
+
+}
+
+
+/* ==========================
+   VACÍO
+========================== */
+
+.mensaje-vacio {
+
+    text-align: center;
+
+    background: white;
+
+    padding: 45px 20px;
+
+    border-radius: 18px;
+
+    border: 1px dashed #d4dee8;
+
+    color: #718096;
+
+}
+
+
+.mensaje-vacio div {
+
+    font-size: 45px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.mensaje-vacio h3 {
+
+    color: #425466;
+
+    margin-bottom: 7px;
+
+}
+
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 25px;
+
+    color: #7a8794;
+
+}
+
+
+/* ==========================
+   CELULAR
+========================== */
+
+@media (max-width: 850px) {
+
+    .estadisticas {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .fila {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+
+    .herramientas {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .contenedor {
+
+        width: 94%;
+
+    }
+
+
+    .panel {
+
+        padding: 20px;
+
+    }
+
+
+    .encabezado h1 {
+
+        font-size: 22px;
+
+    }
+
+
+    .acciones {
+
+        flex-direction: column;
+
+    }
+
+
+    .btn {
+
+        width: 100%;
+
+    }
+
+}

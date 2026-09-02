@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Controlador de Tareas Escolares</title>
+
+    <link rel="stylesheet" href="controlador.css">
+</head>
+
+<body>
+
+<header class="encabezado">
+
+    <div class="logo">📚</div>
+
+    <div>
+        <h1>Controlador de Tareas</h1>
+        <p>Organiza y entrega tus tareas escolares</p>
+    </div>
+
+</header>
+
+
+<main class="contenedor">
+
+    <!-- ESTADÍSTICAS -->
+
+    <section class="estadisticas">
+
+        <div class="estadistica">
+            <span>📚</span>
+            <div>
+                <h3 id="totalTareas">0</h3>
+                <p>Total de tareas</p>
+            </div>
+        </div>
+
+        <div class="estadistica">
+            <span>⏰</span>
+            <div>
+                <h3 id="pendientes">0</h3>
+                <p>Pendientes</p>
+            </div>
+        </div>
+
+        <div class="estadistica">
+            <span>✅</span>
+            <div>
+                <h3 id="completadas">0</h3>
+                <p>Completadas</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- FORMULARIO -->
+
+    <section class="panel">
+
+        <div class="titulo-panel">
+
+            <h2>➕ Registrar tarea</h2>
+
+            <p>
+                Ingresa los datos y adjunta el archivo de la tarea.
+            </p>
+
+        </div>
+
+
+        <form id="formularioTarea">
+
+            <!-- ESTUDIANTE -->
+
+            <div class="grupo">
+
+                <label for="estudiante">
+                    👤 Nombre del estudiante
+                </label>
+
+                <input
+                    type="text"
+                    id="estudiante"
+                    placeholder="Ejemplo: Ana López"
+                    required
+                >
+
+            </div>
+
+
+            <!-- MATERIA Y FECHA -->
+
+            <div class="fila">
+
+                <div class="grupo">
+
+                    <label for="materia">
+                        📚 Materia
+                    </label>
+
+                    <input
+                        type="text"
+                        id="materia"
+                        placeholder="Ejemplo: Computación"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="grupo">
+
+                    <label for="fecha">
+                        📅 Fecha de entrega
+                    </label>
+
+                    <input
+                        type="date"
+                        id="fecha"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- NOMBRE DE LA TAREA -->
+
+            <div class="grupo">
+
+                <label for="titulo">
+                    📝 Nombre de la tarea
+                </label>
+
+                <input
+                    type="text"
+                    id="titulo"
+                    placeholder="Ejemplo: Investigación sobre virus"
+                    required
+                >
+
+            </div>
+
+
+            <!-- DESCRIPCIÓN -->
+
+            <div class="grupo">
+
+                <label for="descripcion">
+                    📄 Descripción
+                </label>
+
+                <textarea
+                    id="descripcion"
+                    rows="4"
+                    placeholder="Escribe las instrucciones..."
+                ></textarea>
+
+            </div>
+
+
+            <!-- SUBIR ARCHIVO -->
+
+            <div class="grupo">
+
+                <label for="archivo">
+                    📎 Subir tarea
+                </label>
+
+                <input
+                    type="file"
+                    id="archivo"
+                    accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.jpg,.jpeg,.png"
+                >
+
+                <small class="ayuda">
+                    PDF, Word, PowerPoint, Excel o imágenes.
+                </small>
+
+            </div>
+
+
+            <!-- ARCHIVO SELECCIONADO -->
+
+            <div
+                id="archivoSeleccionado"
+                class="archivo-seleccionado"
+            ></div>
+
+
+            <!-- BOTÓN -->
+
+            <button
+                type="submit"
+                class="btn-guardar"
+                id="btnGuardar"
+            >
+                💾 Guardar tarea
+            </button>
+
+
+            <button
+                type="button"
+                class="btn-cancelar"
+                id="btnCancelar"
+            >
+                Cancelar edición
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- BUSCADOR -->
+
+    <section class="herramientas">
+
+        <div class="buscador">
+
+            🔎
+
+            <input
+                type="text"
+                id="buscar"
+                placeholder="Buscar estudiante, tarea o materia..."
+            >
+
+        </div>
+
+
+        <select id="filtroEstado">
+
+            <option value="todas">
+                Todas las tareas
+            </option>
+
+            <option value="pendientes">
+                Pendientes
+            </option>
+
+            <option value="completadas">
+                Completadas
+            </option>
+
+        </select>
+
+
+        <select id="filtroEstudiante">
+
+            <option value="todos">
+                Todos los estudiantes
+            </option>
+
+        </select>
+
+    </section>
+
+
+    <!-- LISTA DE TAREAS -->
+
+    <section>
+
+        <div class="titulo-lista">
+
+            <h2>📋 Tareas registradas</h2>
+
+            <span id="contador">
+                0 tareas
+            </span>
+
+        </div>
+
+
+        <div
+            id="listaTareas"
+            class="lista-tareas"
+        ></div>
+
+
+        <div
+            id="mensajeVacio"
+            class="mensaje-vacio"
+        >
+
+            <div>📚</div>
+
+            <h3>No hay tareas registradas</h3>
+
+            <p>
+                Agrega una tarea utilizando el formulario.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        Controlador de Tareas Escolares © 2026
+    </p>
+
+</footer>
+
+
+<script src="contolador.js"></script>
+
+</body>
+</html>
